@@ -176,6 +176,7 @@ namespace rsx
 			std::pair<bool, u32> fetch_u32(u32 addr);
 			void invalidate_cache() { m_cache_size = 0; }
 
+			u32 translate(u32 io) const;
 			u32 get_pos() const { return m_fifo_pos; }
 			u32 last_cmd() const { return m_cmd; }
 			void sync_get() const;

@@ -27,6 +27,7 @@ namespace rsx
 		RsxDmaControl* ctrl = nullptr;
 		u32 dma_address{ 0 };
 		rsx_iomap_table iomap_table;
+		bool is_fifo_rsx_local = false;
 
 		GcmTileInfo tiles[limits::tiles_count];
 		GcmZcullInfo zculls[limits::zculls_count];
@@ -45,6 +46,7 @@ namespace rsx
 		u32 main_mem_size{ 0 };
 		u32 rsx_event_port{ 0 };
 		u32 driver_info{ 0 };
+		bool is_fifo_rsx_local = false;
 
 		// Unsent event bits when aborting RSX/VBLANK thread (will be sent on savestate load)
 		atomic_t<u64> unsent_gcm_events = 0;
